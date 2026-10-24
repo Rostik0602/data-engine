@@ -1,0 +1,93 @@
+@use './styles/breakpoints' as *;
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  border-left: 0.5px solid var(--color-border);
+  background-color: var(--color-white);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 32px;
+  padding: 24px 48px;
+  background-color: var(--color-page);
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(0, 650px);
+  gap: 28px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@include tablet {
+  .kpiGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
+@include mobile {
+  .main {
+    border-left: none;
+  }
+
+  .content {
+    gap: 48px;
+    padding: 32px 16px 126px;
+  }
+
+  .pageHeader {
+    gap: 32px;
+  }
+
+  .columns {
+    gap: 48px;
+  }
+}

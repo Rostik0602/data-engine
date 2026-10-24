@@ -1,0 +1,58 @@
+:root {
+  --color-text: #0c0e12;
+  --color-text-active: #0f0f14;
+  --color-text-nav: #2e2e3f;
+  --color-text-muted: #6b6b82;
+  --color-border: #dddde6;
+  --color-page: #f8fafc;
+  --color-white: #ffffff;
+  --color-accent: #6950f4;
+  --color-accent-light: #f5f3ff;
+  --color-positive: #059669;
+  --shadow-card: 0 1px 1px rgba(0, 0, 0, 0.02), 0 2px 5px rgba(50, 50, 105, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+}
