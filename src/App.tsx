@@ -1,5 +1,6 @@
 import KpiCard from './components/KpiCard/KpiCard'
 import CategoriesCard from './components/CategoriesCard/CategoriesCard'
+import LocationsCard from './components/LocationsCard/LocationsCard'
 import styles from './App.module.scss'
 
 interface Kpi {
@@ -40,6 +41,7 @@ function App() {
           </div>
           <div className={styles.columns}>
             <CategoriesCard />
+            <LocationsCard />
           </div>
         </main>
       </div>
