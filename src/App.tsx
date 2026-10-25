@@ -1,6 +1,7 @@
 import KpiCard from './components/KpiCard/KpiCard'
 import CategoriesCard from './components/CategoriesCard/CategoriesCard'
 import LocationsCard from './components/LocationsCard/LocationsCard'
+import EventsCard from './components/EventsCard/EventsCard'
 import styles from './App.module.scss'
 
 interface Kpi {
@@ -22,26 +23,29 @@ function App() {
     <div className={styles.page}>
       <div className={styles.main}>
         <main className={styles.content}>
-          <div className={styles.pageHeader}>
-            <div className={styles.titleBlock}>
-              <h1 className={styles.title}>Data Engine</h1>
-              <p className={styles.subtitle}>Live data, analytics, and market metrics.</p>
+          <div className={styles.container}>
+            <div className={styles.pageHeader}>
+              <div className={styles.titleBlock}>
+                <h1 className={styles.title}>Data Engine</h1>
+                <p className={styles.subtitle}>Live data, analytics, and market metrics.</p>
+              </div>
+              <div className={styles.kpiGrid}>
+                {kpis.map((kpi) => (
+                  <KpiCard
+                    key={kpi.label}
+                    label={kpi.label}
+                    value={kpi.value}
+                    meta={kpi.meta}
+                    showArrow={kpi.showArrow}
+                  />
+                ))}
+              </div>
             </div>
-            <div className={styles.kpiGrid}>
-              {kpis.map((kpi) => (
-                <KpiCard
-                  key={kpi.label}
-                  label={kpi.label}
-                  value={kpi.value}
-                  meta={kpi.meta}
-                  showArrow={kpi.showArrow}
-                />
-              ))}
+            <div className={styles.columns}>
+              <CategoriesCard />
+              <LocationsCard />
             </div>
-          </div>
-          <div className={styles.columns}>
-            <CategoriesCard />
-            <LocationsCard />
+            <EventsCard />
           </div>
         </main>
       </div>
