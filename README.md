@@ -2,6 +2,8 @@
 
 Тестовое задание: вёрстка страницы Data Engine (Nexli) по макету из Figma, Desktop 1440 и Mobile 402. Старался сделать максимально близко к макету.
 
+Демо: https://data-engine-sage.vercel.app/
+
 Стек: React, TypeScript, Vite, SCSS Modules. Шрифт Plus Jakarta Sans с Google Fonts, иконки и диаграмма взяты из макета в SVG.
 
 ## Запуск
