@@ -9,7 +9,8 @@
   --color-accent: #6950f4;
   --color-accent-light: #f5f3ff;
   --color-positive: #059669;
-  --shadow-card: 0 1px 1px rgba(0, 0, 0, 0.02), 0 2px 5px rgba(50, 50, 105, 0.06);
+  --shadow-card:
+    0 1px 1px rgba(0, 0, 0, 0.02), 0 2px 5px rgba(50, 50, 105, 0.06);
 }
 
 *,
@@ -32,7 +33,7 @@ ul {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--color-text);
   background-color: var(--color-page);
   -webkit-font-smoothing: antialiased;

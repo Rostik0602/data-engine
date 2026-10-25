@@ -1,4 +1,4 @@
-@use '../../styles/breakpoints' as *;
+@use "../../styles/breakpoints" as *;
 
 .backdrop {
   display: none;
@@ -18,10 +18,14 @@
   padding: 20px 12px;
   overflow-y: auto;
   background-color: var(--color-white);
-  box-shadow: 0.5px 0 0 var(--color-border), var(--shadow-card);
+  box-shadow:
+    0.5px 0 0 var(--color-border),
+    var(--shadow-card);
   transform: translateX(-100%);
   visibility: hidden;
-  transition: transform 0.2s ease-out, visibility 0.2s;
+  transition:
+    transform 0.2s ease-out,
+    visibility 0.2s;
 }
 
 .open {

@@ -1,19 +1,44 @@
-import { Fragment } from 'react'
-import Section from '../Section/Section'
-import cleaningIcon from '../../assets/icons/category-cleaning.svg'
-import hourlyHusbandIcon from '../../assets/icons/category-hourly-husband.svg'
-import plumberIcon from '../../assets/icons/category-plumber.svg'
-import electricianIcon from '../../assets/icons/category-electrician.svg'
-import appliancesIcon from '../../assets/icons/category-appliances.svg'
-import styles from './CategoriesCard.module.scss'
+import { Fragment } from "react";
+import Section from "../Section/Section";
+import cleaningIcon from "../../assets/icons/category-cleaning.svg";
+import hourlyHusbandIcon from "../../assets/icons/category-hourly-husband.svg";
+import plumberIcon from "../../assets/icons/category-plumber.svg";
+import electricianIcon from "../../assets/icons/category-electrician.svg";
+import appliancesIcon from "../../assets/icons/category-appliances.svg";
+import styles from "./CategoriesCard.module.scss";
 
 const categories = [
-  { name: 'Cleaning', searches: '142 searches today', change: '+18%', icon: cleaningIcon },
-  { name: 'Hourly husband', searches: '118 searches today', change: '+32%', icon: hourlyHusbandIcon },
-  { name: 'Plumber', searches: '98 searches today', change: '+12%', icon: plumberIcon },
-  { name: 'Electrician', searches: '87 searches today', change: '+15%', icon: electricianIcon },
-  { name: 'Appliances', searches: '64 searches today', change: '+28%', icon: appliancesIcon },
-]
+  {
+    name: "Cleaning",
+    searches: "142 searches today",
+    change: "+18%",
+    icon: cleaningIcon,
+  },
+  {
+    name: "Hourly husband",
+    searches: "118 searches today",
+    change: "+32%",
+    icon: hourlyHusbandIcon,
+  },
+  {
+    name: "Plumber",
+    searches: "98 searches today",
+    change: "+12%",
+    icon: plumberIcon,
+  },
+  {
+    name: "Electrician",
+    searches: "87 searches today",
+    change: "+15%",
+    icon: electricianIcon,
+  },
+  {
+    name: "Appliances",
+    searches: "64 searches today",
+    change: "+28%",
+    icon: appliancesIcon,
+  },
+];
 
 function CategoriesCard() {
   return (
@@ -41,7 +66,7 @@ function CategoriesCard() {
         ))}
       </div>
     </Section>
-  )
+  );
 }
 
-export default CategoriesCard
+export default CategoriesCard;

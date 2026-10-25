@@ -1,9 +1,9 @@
-import NavMenu from '../NavMenu/NavMenu'
-import styles from './MobileMenu.module.scss'
+import NavMenu from "../NavMenu/NavMenu";
+import styles from "./MobileMenu.module.scss";
 
 interface MobileMenuProps {
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
@@ -14,7 +14,7 @@ function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <NavMenu variant="drawer" activeLabel="Dashboard" />
       </aside>
     </>
-  )
+  );
 }
 
-export default MobileMenu
+export default MobileMenu;

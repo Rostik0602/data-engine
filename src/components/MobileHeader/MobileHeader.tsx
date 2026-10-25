@@ -1,16 +1,21 @@
-import menuIcon from '../../assets/icons/menu.svg'
-import bellIcon from '../../assets/icons/bell.svg'
-import styles from './MobileHeader.module.scss'
+import menuIcon from "../../assets/icons/menu.svg";
+import bellIcon from "../../assets/icons/bell.svg";
+import styles from "./MobileHeader.module.scss";
 
 interface MobileHeaderProps {
-  onMenuClick: () => void
+  onMenuClick: () => void;
 }
 
 function MobileHeader({ onMenuClick }: MobileHeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <button type="button" className={styles.iconButton} aria-label="Menu" onClick={onMenuClick}>
+        <button
+          type="button"
+          className={styles.iconButton}
+          aria-label="Menu"
+          onClick={onMenuClick}
+        >
           <img src={menuIcon} alt="" />
         </button>
         <div className={styles.logo}>
@@ -21,7 +26,11 @@ function MobileHeader({ onMenuClick }: MobileHeaderProps) {
         </div>
       </div>
       <div className={styles.right}>
-        <button type="button" className={styles.iconButton} aria-label="Notifications">
+        <button
+          type="button"
+          className={styles.iconButton}
+          aria-label="Notifications"
+        >
           <img src={bellIcon} alt="" />
         </button>
         <div className={styles.avatar}>
@@ -29,7 +38,7 @@ function MobileHeader({ onMenuClick }: MobileHeaderProps) {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default MobileHeader
+export default MobileHeader;

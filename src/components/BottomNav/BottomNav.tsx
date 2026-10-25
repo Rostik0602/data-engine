@@ -1,22 +1,22 @@
-import homeIcon from '../../assets/icons/bottom-home.svg'
-import ordersIcon from '../../assets/icons/bottom-orders.svg'
-import matchIcon from '../../assets/icons/bottom-match.svg'
-import disputesIcon from '../../assets/icons/bottom-disputes.svg'
-import settingsIcon from '../../assets/icons/bottom-settings.svg'
-import styles from './BottomNav.module.scss'
+import homeIcon from "../../assets/icons/bottom-home.svg";
+import ordersIcon from "../../assets/icons/bottom-orders.svg";
+import matchIcon from "../../assets/icons/bottom-match.svg";
+import disputesIcon from "../../assets/icons/bottom-disputes.svg";
+import settingsIcon from "../../assets/icons/bottom-settings.svg";
+import styles from "./BottomNav.module.scss";
 
 interface BottomNavItem {
-  label: string
-  icon: string
+  label: string;
+  icon: string;
 }
 
 const items: BottomNavItem[] = [
-  { label: 'Home', icon: homeIcon },
-  { label: 'Orders', icon: ordersIcon },
-  { label: 'Match', icon: matchIcon },
-  { label: 'Disputes', icon: disputesIcon },
-  { label: 'Settings', icon: settingsIcon },
-]
+  { label: "Home", icon: homeIcon },
+  { label: "Orders", icon: ordersIcon },
+  { label: "Match", icon: matchIcon },
+  { label: "Disputes", icon: disputesIcon },
+  { label: "Settings", icon: settingsIcon },
+];
 
 function BottomNav() {
   return (
@@ -28,7 +28,7 @@ function BottomNav() {
         </a>
       ))}
     </nav>
-  )
+  );
 }
 
-export default BottomNav
+export default BottomNav;

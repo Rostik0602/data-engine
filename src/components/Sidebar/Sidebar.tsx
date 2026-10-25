@@ -1,7 +1,7 @@
-import NavMenu from '../NavMenu/NavMenu'
-import collapseIcon from '../../assets/icons/sidebar-collapse.svg'
-import signOutIcon from '../../assets/icons/sign-out.svg'
-import styles from './Sidebar.module.scss'
+import NavMenu from "../NavMenu/NavMenu";
+import collapseIcon from "../../assets/icons/sidebar-collapse.svg";
+import signOutIcon from "../../assets/icons/sign-out.svg";
+import styles from "./Sidebar.module.scss";
 
 function Sidebar() {
   return (
@@ -13,7 +13,11 @@ function Sidebar() {
           </div>
           <span className={styles.logoText}>Nexli</span>
         </div>
-        <button type="button" className={styles.collapseButton} aria-label="Collapse sidebar">
+        <button
+          type="button"
+          className={styles.collapseButton}
+          aria-label="Collapse sidebar"
+        >
           <img src={collapseIcon} alt="" />
         </button>
       </div>
@@ -27,7 +31,7 @@ function Sidebar() {
         </button>
       </div>
     </aside>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

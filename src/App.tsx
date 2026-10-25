@@ -1,31 +1,51 @@
-import { useState } from 'react'
-import Sidebar from './components/Sidebar/Sidebar'
-import TopBar from './components/TopBar/TopBar'
-import MobileHeader from './components/MobileHeader/MobileHeader'
-import MobileMenu from './components/MobileMenu/MobileMenu'
-import BottomNav from './components/BottomNav/BottomNav'
-import KpiCard from './components/KpiCard/KpiCard'
-import CategoriesCard from './components/CategoriesCard/CategoriesCard'
-import LocationsCard from './components/LocationsCard/LocationsCard'
-import EventsCard from './components/EventsCard/EventsCard'
-import styles from './App.module.scss'
+import { useState } from "react";
+import Sidebar from "./components/Sidebar/Sidebar";
+import TopBar from "./components/TopBar/TopBar";
+import MobileHeader from "./components/MobileHeader/MobileHeader";
+import MobileMenu from "./components/MobileMenu/MobileMenu";
+import BottomNav from "./components/BottomNav/BottomNav";
+import KpiCard from "./components/KpiCard/KpiCard";
+import CategoriesCard from "./components/CategoriesCard/CategoriesCard";
+import LocationsCard from "./components/LocationsCard/LocationsCard";
+import EventsCard from "./components/EventsCard/EventsCard";
+import styles from "./App.module.scss";
 
 interface Kpi {
-  label: string
-  value: string
-  meta: string
-  showArrow: boolean
+  label: string;
+  value: string;
+  meta: string;
+  showArrow: boolean;
 }
 
 const kpis: Kpi[] = [
-  { label: 'DATA TODAY', value: '1,842', meta: 'Events / interactions', showArrow: false },
-  { label: 'SEARCHES', value: '456', meta: '22% vs yesterday', showArrow: true },
-  { label: 'CONVERSION', value: '12.4%', meta: '1.8pp this week', showArrow: true },
-  { label: 'TIME TO BOOK', value: '3.2 min', meta: '0.8 min faster', showArrow: true },
-]
+  {
+    label: "DATA TODAY",
+    value: "1,842",
+    meta: "Events / interactions",
+    showArrow: false,
+  },
+  {
+    label: "SEARCHES",
+    value: "456",
+    meta: "22% vs yesterday",
+    showArrow: true,
+  },
+  {
+    label: "CONVERSION",
+    value: "12.4%",
+    meta: "1.8pp this week",
+    showArrow: true,
+  },
+  {
+    label: "TIME TO BOOK",
+    value: "3.2 min",
+    meta: "0.8 min faster",
+    showArrow: true,
+  },
+];
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className={styles.page}>
@@ -38,7 +58,9 @@ function App() {
             <div className={styles.pageHeader}>
               <div className={styles.titleBlock}>
                 <h1 className={styles.title}>Data Engine</h1>
-                <p className={styles.subtitle}>Live data, analytics, and market metrics.</p>
+                <p className={styles.subtitle}>
+                  Live data, analytics, and market metrics.
+                </p>
               </div>
               <div className={styles.kpiGrid}>
                 {kpis.map((kpi) => (
@@ -63,7 +85,7 @@ function App() {
       <BottomNav />
       <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

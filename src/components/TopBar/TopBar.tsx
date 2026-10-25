@@ -1,12 +1,16 @@
-import bellIcon from '../../assets/icons/bell.svg'
-import styles from './TopBar.module.scss'
+import bellIcon from "../../assets/icons/bell.svg";
+import styles from "./TopBar.module.scss";
 
 function TopBar() {
   return (
     <header className={styles.topBar}>
       <p className={styles.title}>Data Engine</p>
       <div className={styles.user}>
-        <button type="button" className={styles.bellButton} aria-label="Notifications">
+        <button
+          type="button"
+          className={styles.bellButton}
+          aria-label="Notifications"
+        >
           <img src={bellIcon} alt="" />
         </button>
         <div className={styles.avatar}>
@@ -18,7 +22,7 @@ function TopBar() {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default TopBar
+export default TopBar;
