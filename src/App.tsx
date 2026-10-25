@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import Sidebar from './components/Sidebar/Sidebar'
 import TopBar from './components/TopBar/TopBar'
+import MobileHeader from './components/MobileHeader/MobileHeader'
 import KpiCard from './components/KpiCard/KpiCard'
 import CategoriesCard from './components/CategoriesCard/CategoriesCard'
 import LocationsCard from './components/LocationsCard/LocationsCard'
@@ -21,11 +23,14 @@ const kpis: Kpi[] = [
 ]
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <div className={styles.page}>
       <Sidebar />
       <div className={styles.main}>
         <TopBar />
+        <MobileHeader onMenuClick={() => setIsMenuOpen(!isMenuOpen)} />
         <main className={styles.content}>
           <div className={styles.container}>
             <div className={styles.pageHeader}>
