@@ -1,0 +1,74 @@
+@use '../../styles/breakpoints' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 0.5px var(--color-border), var(--shadow-card);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 18px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-accent-light);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--color-text);
+}
+
+.searches {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-text-muted);
+}
+
+.change {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  white-space: nowrap;
+  color: var(--color-positive);
+}
+
+.divider {
+  height: 0.5px;
+  margin: -0.25px 0 -0.25px -46px;
+  background-color: var(--color-border);
+}
+
+@include mobile {
+  .divider {
+    margin-left: 78px;
+  }
+}

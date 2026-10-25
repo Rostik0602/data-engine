@@ -1,7 +1,15 @@
 import KpiCard from './components/KpiCard/KpiCard'
+import CategoriesCard from './components/CategoriesCard/CategoriesCard'
 import styles from './App.module.scss'
 
-const kpis = [
+interface Kpi {
+  label: string
+  value: string
+  meta: string
+  showArrow: boolean
+}
+
+const kpis: Kpi[] = [
   { label: 'DATA TODAY', value: '1,842', meta: 'Events / interactions', showArrow: false },
   { label: 'SEARCHES', value: '456', meta: '22% vs yesterday', showArrow: true },
   { label: 'CONVERSION', value: '12.4%', meta: '1.8pp this week', showArrow: true },
@@ -29,6 +37,9 @@ function App() {
                 />
               ))}
             </div>
+          </div>
+          <div className={styles.columns}>
+            <CategoriesCard />
           </div>
         </main>
       </div>
