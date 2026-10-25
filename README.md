@@ -1,75 +1,24 @@
-# React + TypeScript + Vite
+# Data Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Тестовое задание: вёрстка страницы Data Engine (Nexli) по макету из Figma, Desktop 1440 и Mobile 402. Старался сделать максимально близко к макету.
 
-Currently, two official plugins are available:
+Стек: React, TypeScript, Vite, SCSS Modules. Шрифт Plus Jakarta Sans с Google Fonts, иконки и диаграмма взяты из макета в SVG.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Запуск
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Сборка: `npm run build`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Заметки
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Мобильное меню в макете есть, но лежит за краем фрейма, и в прототипе к бургеру ничего не привязано. Поэтому открытие сделал сам: по бургеру меню выезжает слева, закрывается повторным нажатием или тапом мимо него. В макете меню обрезается снизу, у меня оно прокручивается.
 
-```
+Шире 1440 контент не растягивается больше чем на 1300px (это ограничение есть в макете) и стоит по центру. От 1024 до 1279 колонки встают друг под друга, меньше 1024 включается мобильная версия.
+
+Несостыковки в макете специально не правил, чтобы всё совпадало с Figma: разделители в Top searched categories выходят за край карточки, проценты в легенде не сходятся с заказами, а сегмент Other в диаграмме меньше, чем должен быть.
+
+Данные пока статические и лежат массивами прямо в компонентах: так было проще точно повторить макет. Разметка при этом строится из массивов, поэтому реальные данные можно подключить без переделки вёрстки, например получать их с сервера и передавать через пропсы. В рабочем проекте я бы также считал проценты и диаграмму из количества заказов, а активный пункт меню определял по адресу страницы.
