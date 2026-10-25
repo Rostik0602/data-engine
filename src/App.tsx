@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Sidebar from './components/Sidebar/Sidebar'
 import TopBar from './components/TopBar/TopBar'
 import MobileHeader from './components/MobileHeader/MobileHeader'
+import MobileMenu from './components/MobileMenu/MobileMenu'
+import BottomNav from './components/BottomNav/BottomNav'
 import KpiCard from './components/KpiCard/KpiCard'
 import CategoriesCard from './components/CategoriesCard/CategoriesCard'
 import LocationsCard from './components/LocationsCard/LocationsCard'
@@ -58,6 +60,8 @@ function App() {
           </div>
         </main>
       </div>
+      <BottomNav />
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>
   )
 }

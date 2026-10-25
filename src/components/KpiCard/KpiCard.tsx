@@ -1,4 +1,4 @@
-import { ArrowUp } from 'lucide-react'
+import arrowIcon from '../../assets/icons/kpi-arrow-up.svg'
 import styles from './KpiCard.module.scss'
 
 interface KpiCardProps {
@@ -15,7 +15,7 @@ function KpiCard({ label, value, meta, showArrow }: KpiCardProps) {
       <div className={styles.body}>
         <p className={styles.value}>{value}</p>
         <div className={styles.meta}>
-          {showArrow && <ArrowUp size={12} strokeWidth={1.3} absoluteStrokeWidth />}
+          {showArrow && <img src={arrowIcon} alt="" />}
           <span>{meta}</span>
         </div>
       </div>

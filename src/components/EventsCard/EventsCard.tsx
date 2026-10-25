@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
-import { Diamond } from 'lucide-react'
 import Section from '../Section/Section'
+import diamondIcon from '../../assets/icons/event-diamond.svg'
 import styles from './EventsCard.module.scss'
 
 interface EventItem {
@@ -30,7 +30,7 @@ function EventsCard() {
           <Fragment key={event.time}>
             {index > 0 && <div className={styles.divider} />}
             <div className={styles.row}>
-              <Diamond className={styles.icon} size={24} strokeWidth={1.3} absoluteStrokeWidth />
+              <img className={styles.icon} src={diamondIcon} alt="" />
               <div className={styles.text}>
                 <p className={styles.title}>{event.text}</p>
                 <p className={styles.time}>{event.time}</p>
