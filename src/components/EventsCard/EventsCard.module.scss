@@ -7,9 +7,7 @@
   padding: 18px;
   border-radius: 16px;
   background-color: var(--color-white);
-  box-shadow:
-    0 0 0 0.5px var(--color-border),
-    var(--shadow-card);
+  box-shadow: 0 0 0 0.5px var(--color-border), var(--shadow-card);
 }
 
 .row {
@@ -45,9 +43,9 @@
 }
 
 .divider {
-  height: 0.5px;
-  margin: -0.25px 0;
-  background-color: var(--color-border);
+  height: 1px;
+  margin-top: -1px;
+  box-shadow: inset 0 -0.5px 0 var(--color-border);
 }
 
 @include mobile {

@@ -12,9 +12,9 @@
 }
 
 .divider {
-  height: 0.5px;
-  margin: -0.25px 0;
-  background-color: #dcdee6;
+  height: 1px;
+  margin-top: -1px;
+  box-shadow: inset 0 -0.5px 0 #dcdee6;
 }
 
 .group {
